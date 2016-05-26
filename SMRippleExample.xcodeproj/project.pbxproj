@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */; };
+		F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */; };
+		F3EB87AC1CF5CE90005AFAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */; };
+		F3EB87AE1CF5CE90005AFAB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */; };
+		F3EB87B11CF5CE90005AFAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */; };
+		F3EB87BC1CF5CE90005AFAB8 /* SMRippleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87BB1CF5CE90005AFAB8 /* SMRippleExampleTests.swift */; };
+		F3EB87C71CF5CE90005AFAB8 /* SMRippleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */; };
+		F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3EB87B81CF5CE90005AFAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EB879B1CF5CE90005AFAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3EB87A21CF5CE90005AFAB8;
+			remoteInfo = SMRippleExample;
+		};
+		F3EB87C31CF5CE90005AFAB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3EB879B1CF5CE90005AFAB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3EB87A21CF5CE90005AFAB8;
+			remoteInfo = SMRippleExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3EB87A31CF5CE90005AFAB8 /* SMRippleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMRippleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3EB87AB1CF5CE90005AFAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3EB87B01CF5CE90005AFAB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3EB87B21CF5CE90005AFAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EB87B71CF5CE90005AFAB8 /* SMRippleExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMRippleExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EB87BB1CF5CE90005AFAB8 /* SMRippleExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMRippleExampleTests.swift; sourceTree = "<group>"; };
+		F3EB87BD1CF5CE90005AFAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EB87C21CF5CE90005AFAB8 /* SMRippleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMRippleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMRippleExampleUITests.swift; sourceTree = "<group>"; };
+		F3EB87C81CF5CE90005AFAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRippleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3EB87A01CF5CE90005AFAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87B41CF5CE90005AFAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87BF1CF5CE90005AFAB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3EB879A1CF5CE90005AFAB8 = {
+			isa = PBXGroup;
+			children = (
+				F3EB87A51CF5CE90005AFAB8 /* SMRippleExample */,
+				F3EB87BA1CF5CE90005AFAB8 /* SMRippleExampleTests */,
+				F3EB87C51CF5CE90005AFAB8 /* SMRippleExampleUITests */,
+				F3EB87A41CF5CE90005AFAB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3EB87A41CF5CE90005AFAB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3EB87A31CF5CE90005AFAB8 /* SMRippleExample.app */,
+				F3EB87B71CF5CE90005AFAB8 /* SMRippleExampleTests.xctest */,
+				F3EB87C21CF5CE90005AFAB8 /* SMRippleExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3EB87A51CF5CE90005AFAB8 /* SMRippleExample */ = {
+			isa = PBXGroup;
+			children = (
+				F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */,
+				F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */,
+				F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */,
+				F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */,
+				F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */,
+				F3EB87B21CF5CE90005AFAB8 /* Info.plist */,
+				F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */,
+			);
+			path = SMRippleExample;
+			sourceTree = "<group>";
+		};
+		F3EB87BA1CF5CE90005AFAB8 /* SMRippleExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3EB87BB1CF5CE90005AFAB8 /* SMRippleExampleTests.swift */,
+				F3EB87BD1CF5CE90005AFAB8 /* Info.plist */,
+			);
+			path = SMRippleExampleTests;
+			sourceTree = "<group>";
+		};
+		F3EB87C51CF5CE90005AFAB8 /* SMRippleExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */,
+				F3EB87C81CF5CE90005AFAB8 /* Info.plist */,
+			);
+			path = SMRippleExampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3EB87A21CF5CE90005AFAB8 /* SMRippleExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EB87CB1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExample" */;
+			buildPhases = (
+				F3EB879F1CF5CE90005AFAB8 /* Sources */,
+				F3EB87A01CF5CE90005AFAB8 /* Frameworks */,
+				F3EB87A11CF5CE90005AFAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMRippleExample;
+			productName = SMRippleExample;
+			productReference = F3EB87A31CF5CE90005AFAB8 /* SMRippleExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3EB87B61CF5CE90005AFAB8 /* SMRippleExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EB87CE1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleTests" */;
+			buildPhases = (
+				F3EB87B31CF5CE90005AFAB8 /* Sources */,
+				F3EB87B41CF5CE90005AFAB8 /* Frameworks */,
+				F3EB87B51CF5CE90005AFAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3EB87B91CF5CE90005AFAB8 /* PBXTargetDependency */,
+			);
+			name = SMRippleExampleTests;
+			productName = SMRippleExampleTests;
+			productReference = F3EB87B71CF5CE90005AFAB8 /* SMRippleExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3EB87C11CF5CE90005AFAB8 /* SMRippleExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3EB87D11CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleUITests" */;
+			buildPhases = (
+				F3EB87BE1CF5CE90005AFAB8 /* Sources */,
+				F3EB87BF1CF5CE90005AFAB8 /* Frameworks */,
+				F3EB87C01CF5CE90005AFAB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3EB87C41CF5CE90005AFAB8 /* PBXTargetDependency */,
+			);
+			name = SMRippleExampleUITests;
+			productName = SMRippleExampleUITests;
+			productReference = F3EB87C21CF5CE90005AFAB8 /* SMRippleExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3EB879B1CF5CE90005AFAB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Sanjay Maharjan";
+				TargetAttributes = {
+					F3EB87A21CF5CE90005AFAB8 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F3EB87B61CF5CE90005AFAB8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F3EB87A21CF5CE90005AFAB8;
+					};
+					F3EB87C11CF5CE90005AFAB8 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F3EB87A21CF5CE90005AFAB8;
+					};
+				};
+			};
+			buildConfigurationList = F3EB879E1CF5CE90005AFAB8 /* Build configuration list for PBXProject "SMRippleExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3EB879A1CF5CE90005AFAB8;
+			productRefGroup = F3EB87A41CF5CE90005AFAB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3EB87A21CF5CE90005AFAB8 /* SMRippleExample */,
+				F3EB87B61CF5CE90005AFAB8 /* SMRippleExampleTests */,
+				F3EB87C11CF5CE90005AFAB8 /* SMRippleExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3EB87A11CF5CE90005AFAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EB87B11CF5CE90005AFAB8 /* LaunchScreen.storyboard in Resources */,
+				F3EB87AE1CF5CE90005AFAB8 /* Assets.xcassets in Resources */,
+				F3EB87AC1CF5CE90005AFAB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87B51CF5CE90005AFAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87C01CF5CE90005AFAB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3EB879F1CF5CE90005AFAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */,
+				F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */,
+				F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87B31CF5CE90005AFAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EB87BC1CF5CE90005AFAB8 /* SMRippleExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3EB87BE1CF5CE90005AFAB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3EB87C71CF5CE90005AFAB8 /* SMRippleExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3EB87B91CF5CE90005AFAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3EB87A21CF5CE90005AFAB8 /* SMRippleExample */;
+			targetProxy = F3EB87B81CF5CE90005AFAB8 /* PBXContainerItemProxy */;
+		};
+		F3EB87C41CF5CE90005AFAB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3EB87A21CF5CE90005AFAB8 /* SMRippleExample */;
+			targetProxy = F3EB87C31CF5CE90005AFAB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3EB87AB1CF5CE90005AFAB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3EB87B01CF5CE90005AFAB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3EB87C91CF5CE90005AFAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3EB87CA1CF5CE90005AFAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3EB87CC1CF5CE90005AFAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMRippleExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3EB87CD1CF5CE90005AFAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SMRippleExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3EB87CF1CF5CE90005AFAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMRippleExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMRippleExample.app/SMRippleExample";
+			};
+			name = Debug;
+		};
+		F3EB87D01CF5CE90005AFAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SMRippleExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMRippleExample.app/SMRippleExample";
+			};
+			name = Release;
+		};
+		F3EB87D21CF5CE90005AFAB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMRippleExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMRippleExample;
+			};
+			name = Debug;
+		};
+		F3EB87D31CF5CE90005AFAB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SMRippleExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SMRippleExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3EB879E1CF5CE90005AFAB8 /* Build configuration list for PBXProject "SMRippleExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EB87C91CF5CE90005AFAB8 /* Debug */,
+				F3EB87CA1CF5CE90005AFAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3EB87CB1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EB87CC1CF5CE90005AFAB8 /* Debug */,
+				F3EB87CD1CF5CE90005AFAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3EB87CE1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EB87CF1CF5CE90005AFAB8 /* Debug */,
+				F3EB87D01CF5CE90005AFAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3EB87D11CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3EB87D21CF5CE90005AFAB8 /* Debug */,
+				F3EB87D31CF5CE90005AFAB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3EB879B1CF5CE90005AFAB8 /* Project object */;
+}
