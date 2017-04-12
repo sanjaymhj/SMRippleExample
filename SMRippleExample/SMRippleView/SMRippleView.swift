@@ -1,5 +1,15 @@
 import UIKit
 
+/**
+ Ripple View
+ 
+ Creates a view with concentric circular ripples.
+ 
+ Creates a layer of the ripple on the frame and constraints its max frame to the parent's frame.
+ 
+ 
+ `init(frame: CGRect, rippleColor: UIColor, rippleThickness: Float, rippleTimer: Float, fillColor: UIColor?, animationDuration: Double, parentFrame: CGRect)`
+ */
 final class SMRippleView: UIView {
     
     var rippleColor: UIColor = UIColor.black
@@ -34,8 +44,8 @@ final class SMRippleView: UIView {
         self.rippleColor = rippleColor
         self.rippleThickness = rippleThickness
         self.rippleTimer = rippleTimer
-        if fillColor != nil {
-            self.fillColor = fillColor!
+        if let fillColor = fillColor {
+            self.fillColor = fillColor
         } else {
             self.fillColor = UIColor.clear
         }
@@ -43,12 +53,12 @@ final class SMRippleView: UIView {
         self.animationDuration = TimeInterval(animationDuration)
         self.drawWithFrame(frame)
         
-        let maxSize = min(parentFrame.width,parentFrame.height)
-        self.rippleEndScale = Float(maxSize - (self.originalSize?.width)!) / Float(self.frame.width)
+        let maxSize = min(parentFrame.width, parentFrame.height)
+        self.rippleEndScale = Float(maxSize - frame.width) / Float(self.frame.width)
 
     }
     
-    func drawWithFrame(_ frame: CGRect) {
+    private func drawWithFrame(_ frame: CGRect) {
         self.timer = Timer.scheduledTimer(timeInterval: Double(self.rippleTimer), target: self, selector: #selector(continuousRipples), userInfo: nil, repeats: true)
     }
     
@@ -70,16 +80,16 @@ final class SMRippleView: UIView {
         self.layer.addSublayer(circleShape)
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        scaleAnimation.fromValue = NSValue(caTransform3D:CATransform3DIdentity)
-        scaleAnimation.toValue = NSValue(caTransform3D:CATransform3DMakeScale(CGFloat(self.rippleEndScale), 1, 1))
-        let alphaAnimation = CABasicAnimation(keyPath:"opacity")
+        scaleAnimation.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
+        scaleAnimation.toValue = NSValue(caTransform3D: CATransform3DMakeScale(CGFloat(self.rippleEndScale), 1, 1))
+        let alphaAnimation = CABasicAnimation(keyPath: "opacity")
         alphaAnimation.fromValue = 1
         alphaAnimation.toValue = 0
         
         let animation = CAAnimationGroup()
         animation.animations = [scaleAnimation, alphaAnimation]
         animation.duration = self.animationDuration
-        animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         circleShape.add(animation, forKey:nil)
         
     }
