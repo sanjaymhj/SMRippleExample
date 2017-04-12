@@ -1,17 +1,17 @@
 import UIKit
 
-class SMRippleView: UIView {
+final class SMRippleView: UIView {
     
-    var rippleColor: UIColor = UIColor.blackColor()
+    var rippleColor: UIColor = UIColor.black
     var rippleThickness: Float = 0.5
     var rippleTimer: Float = 1
     var rippleEndScale: Float = 5
-    var rippleTrailColor: UIColor = UIColor.clearColor()
-    var fillColor: UIColor = UIColor.clearColor()
-    var animationDuration: NSTimeInterval = 2.5
+    var rippleTrailColor: UIColor = UIColor.clear
+    var fillColor: UIColor = UIColor.clear
+    var animationDuration: TimeInterval = 2.5
     var originalSize: CGRect?
     
-    private var timer: NSTimer?
+    fileprivate var timer: Timer?
     
     convenience init(frame: CGRect, rippleColor: UIColor, rippleThickness: Float, rippleTimer: Float, fillColor: UIColor?, animationDuration: Double, parentFrame: CGRect) {
         self.init(frame: frame)
@@ -19,7 +19,7 @@ class SMRippleView: UIView {
         commonInit(frame, rippleColor: rippleColor, rippleThickness: rippleThickness, rippleTimer: rippleTimer, fillColor: fillColor,  animationDuration: animationDuration, parentFrame: parentFrame)
     }
     
-    private override init(frame: CGRect) {
+    fileprivate override init(frame: CGRect) {
         let squareRect = CGRect(x: frame.minX, y: frame.minY, width: max(frame.width, frame.height), height: max(frame.width, frame.height))
         super.init(frame: squareRect)
     }
@@ -29,7 +29,7 @@ class SMRippleView: UIView {
         timer.invalidate()
     }
     
-    private func commonInit(frame: CGRect, rippleColor: UIColor = UIColor.blackColor(), rippleThickness: Float = 0.5, rippleTimer: Float = 1,  fillColor: UIColor?, animationDuration: Double, parentFrame: CGRect) {
+    fileprivate func commonInit(_ frame: CGRect, rippleColor: UIColor = UIColor.black, rippleThickness: Float = 0.5, rippleTimer: Float = 1,  fillColor: UIColor?, animationDuration: Double, parentFrame: CGRect) {
         self.originalSize = frame
         self.rippleColor = rippleColor
         self.rippleThickness = rippleThickness
@@ -37,10 +37,10 @@ class SMRippleView: UIView {
         if fillColor != nil {
             self.fillColor = fillColor!
         } else {
-            self.fillColor = UIColor.clearColor()
+            self.fillColor = UIColor.clear
         }
         
-        self.animationDuration = NSTimeInterval(animationDuration)
+        self.animationDuration = TimeInterval(animationDuration)
         self.drawWithFrame(frame)
         
         let maxSize = min(parentFrame.width,parentFrame.height)
@@ -48,29 +48,30 @@ class SMRippleView: UIView {
 
     }
     
-    func drawWithFrame(frame: CGRect) {
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(Double(self.rippleTimer), target: self, selector: #selector(continuousRipples), userInfo: nil, repeats: true)
+    func drawWithFrame(_ frame: CGRect) {
+        self.timer = Timer.scheduledTimer(timeInterval: Double(self.rippleTimer), target: self, selector: #selector(continuousRipples), userInfo: nil, repeats: true)
     }
     
-    func continuousRipples() {
-        let pathFrame: CGRect = CGRect(x: -CGRectGetMidX(self.bounds), y: -CGRectGetMidY(self.bounds), width: self.bounds.size.width, height: self.bounds.size.height)
+    @objc
+    private func continuousRipples() {
+        let pathFrame: CGRect = CGRect(x: -self.bounds.midX, y: -self.bounds.midY, width: self.bounds.size.width, height: self.bounds.size.height)
         let path = UIBezierPath(roundedRect: pathFrame, cornerRadius: self.frame.size.height)
-        let shapePosition = self.convertPoint(self.center, fromView: nil)
+        let shapePosition = self.convert(self.center, from: nil)
         
         let circleShape = CAShapeLayer()
-        circleShape.path = path.CGPath
+        circleShape.path = path.cgPath
         circleShape.position = shapePosition
-        circleShape.fillColor = self.fillColor.CGColor
+        circleShape.fillColor = self.fillColor.cgColor
         circleShape.opacity = 0
         circleShape.zPosition = -1
-        circleShape.strokeColor = self.rippleColor.CGColor
+        circleShape.strokeColor = self.rippleColor.cgColor
         circleShape.lineWidth = CGFloat(self.rippleThickness)
         
         self.layer.addSublayer(circleShape)
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        scaleAnimation.fromValue = NSValue(CATransform3D:CATransform3DIdentity)
-        scaleAnimation.toValue = NSValue(CATransform3D:CATransform3DMakeScale(CGFloat(self.rippleEndScale), 1, 1))
+        scaleAnimation.fromValue = NSValue(caTransform3D:CATransform3DIdentity)
+        scaleAnimation.toValue = NSValue(caTransform3D:CATransform3DMakeScale(CGFloat(self.rippleEndScale), 1, 1))
         let alphaAnimation = CABasicAnimation(keyPath:"opacity")
         alphaAnimation.fromValue = 1
         alphaAnimation.toValue = 0
@@ -79,7 +80,7 @@ class SMRippleView: UIView {
         animation.animations = [scaleAnimation, alphaAnimation]
         animation.duration = self.animationDuration
         animation.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
-        circleShape.addAnimation(animation, forKey:nil)
+        circleShape.add(animation, forKey:nil)
         
     }
     
