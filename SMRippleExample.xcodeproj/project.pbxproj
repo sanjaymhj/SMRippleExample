@@ -14,7 +14,7 @@
 		F3EB87B11CF5CE90005AFAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */; };
 		F3EB87BC1CF5CE90005AFAB8 /* SMRippleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87BB1CF5CE90005AFAB8 /* SMRippleExampleTests.swift */; };
 		F3EB87C71CF5CE90005AFAB8 /* SMRippleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */; };
-		F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */; };
+		F3FDB5C21E9DEEF100B95B3E /* SMRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		F3EB87C21CF5CE90005AFAB8 /* SMRippleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMRippleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMRippleExampleUITests.swift; sourceTree = "<group>"; };
 		F3EB87C81CF5CE90005AFAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRippleView.swift; sourceTree = "<group>"; };
+		F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMRippleView.swift; path = SMRippleView/SMRippleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +99,13 @@
 		F3EB87A51CF5CE90005AFAB8 /* SMRippleExample */ = {
 			isa = PBXGroup;
 			children = (
+				F3FDB5C01E9DEEE200B95B3E /* SMRippleView */,
 				F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */,
 				F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */,
 				F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */,
 				F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */,
 				F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */,
 				F3EB87B21CF5CE90005AFAB8 /* Info.plist */,
-				F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */,
 			);
 			path = SMRippleExample;
 			sourceTree = "<group>";
@@ -126,6 +126,14 @@
 				F3EB87C81CF5CE90005AFAB8 /* Info.plist */,
 			);
 			path = SMRippleExampleUITests;
+			sourceTree = "<group>";
+		};
+		F3FDB5C01E9DEEE200B95B3E /* SMRippleView */ = {
+			isa = PBXGroup;
+			children = (
+				F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */,
+			);
+			name = SMRippleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +269,7 @@
 			files = (
 				F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */,
 				F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */,
-				F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */,
+				F3FDB5C21E9DEEF100B95B3E /* SMRippleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +494,7 @@
 				F3EB87CD1CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3EB87CE1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				F3EB87D01CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3EB87D11CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				F3EB87D31CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
