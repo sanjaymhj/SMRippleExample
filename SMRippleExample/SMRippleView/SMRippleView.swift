@@ -51,37 +51,48 @@ final class SMRippleView: UIView {
         }
         
         self.animationDuration = TimeInterval(animationDuration)
-        self.drawWithFrame(frame)
-        
         let maxSize = min(parentFrame.width, parentFrame.height)
         self.rippleEndScale = Float(maxSize - frame.width) / Float(self.frame.width)
-
-    }
-    
-    private func drawWithFrame(_ frame: CGRect) {
-        self.timer = Timer.scheduledTimer(timeInterval: Double(self.rippleTimer), target: self, selector: #selector(continuousRipples), userInfo: nil, repeats: true)
-    }
-    
-    @objc
-    private func continuousRipples() {
-        let pathFrame: CGRect = CGRect(x: -self.bounds.midX, y: -self.bounds.midY, width: self.bounds.size.width, height: self.bounds.size.height)
-        let path = UIBezierPath(roundedRect: pathFrame, cornerRadius: self.frame.size.height)
-        let shapePosition = self.convert(self.center, from: nil)
         
-        let circleShape = CAShapeLayer()
+        self.drawWithFrame(frame)
+    }
+    
+    /// For initial ripple ie. at 0 time
+    private func drawWithFrame(_ frame: CGRect) {
+        let _ = getLayer()
+        startRipple()
+    }
+    
+    private func getLayer() -> RippleCALayer {
+        
+        //Minimum bounds
+        let pathFrame: CGRect = CGRect(x: -self.bounds.midX, y: -self.bounds.midY, width: self.bounds.size.width, height: self.bounds.size.height)
+
+        
+        let path = UIBezierPath(roundedRect: pathFrame, cornerRadius: self.frame.size.height)
+        
+        let shapePosition = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+        let circleShape = RippleCALayer()
         circleShape.path = path.cgPath
+        
+        //position set to Center of bounds. If set to origin, it will only expand to +x and +y
         circleShape.position = shapePosition
         circleShape.fillColor = self.fillColor.cgColor
-        circleShape.opacity = 0
+        circleShape.opacity = 0//Opacity is 0 so it is invisible in initial state
         circleShape.zPosition = -1
         circleShape.strokeColor = self.rippleColor.cgColor
         circleShape.lineWidth = CGFloat(self.rippleThickness)
-        
-        self.layer.addSublayer(circleShape)
-        
+
+        return circleShape
+    }
+    
+    private func getAnimation() -> CAAnimationGroup {
+        // Scale Animation
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         scaleAnimation.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
         scaleAnimation.toValue = NSValue(caTransform3D: CATransform3DMakeScale(CGFloat(self.rippleEndScale), 1, 1))
+        
+        // Alpha Animation
         let alphaAnimation = CABasicAnimation(keyPath: "opacity")
         alphaAnimation.fromValue = 1
         alphaAnimation.toValue = 0
@@ -90,12 +101,49 @@ final class SMRippleView: UIView {
         animation.animations = [scaleAnimation, alphaAnimation]
         animation.duration = self.animationDuration
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        circleShape.add(animation, forKey:nil)
-        
+        return animation
+    }
+    
+    
+    func startRipple() {
+        self.timer = Timer.scheduledTimer(timeInterval: Double(self.rippleTimer), target: self, selector: #selector(continuousRipples), userInfo: nil, repeats: true)
+    }
+    
+    @objc
+    private func continuousRipples() {
+        let layer = getLayer()
+        let animation = getAnimation()
+        // To remove layer from super layer after animation completes
+        animation.delegate = layer
+        layer.animationDelegate = self
+        layer.add(animation, forKey: nil)
+        self.layer.addSublayer(layer)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
+}
+
+// Protocol and extension for removing layer from super layer after animation completes
+
+extension SMRippleView: AnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, layer: CALayer, finished: Bool) {
+        layer.removeFromSuperlayer()
+    }
+}
+
+extension RippleCALayer: CAAnimationDelegate {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        self.animationDelegate?.animationDidStop(anim, layer: self, finished: flag)
+    }
+}
+
+final class RippleCALayer: CAShapeLayer {
+    var animationDelegate: AnimationDelegate?
+}
+
+protocol AnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, layer: CALayer, finished: Bool)
 }

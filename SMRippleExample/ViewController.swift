@@ -16,8 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fillColor: UIColor? = nil//UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1)
-        rippleView = SMRippleView(frame: baseView.frame, rippleColor: UIColor.clear, rippleThickness: 0.2, rippleTimer: 1, fillColor: fillColor, animationDuration: 3, parentFrame: self.view.frame)
+        let fillColor: UIColor? = UIColor.black//UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1)
+        rippleView = SMRippleView(frame: baseView.frame, rippleColor: UIColor.black, rippleThickness: 0.2, rippleTimer: 0.6, fillColor: fillColor, animationDuration: 4, parentFrame: self.view.frame)
         self.view.addSubview(rippleView!)
         // Do any additional setup after loading the view, typically from a nib.
     }

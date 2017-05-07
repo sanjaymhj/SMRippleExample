@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F35BCA0B1EBF2DC200C90DD0 /* RippleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */; };
+		F3949A131EBF31F000BC74AE /* RippleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3949A121EBF31F000BC74AE /* RippleCell.swift */; };
 		F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */; };
 		F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */; };
 		F3EB87AC1CF5CE90005AFAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleTVC.swift; sourceTree = "<group>"; };
+		F3949A121EBF31F000BC74AE /* RippleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleCell.swift; sourceTree = "<group>"; };
 		F3EB87A31CF5CE90005AFAB8 /* SMRippleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMRippleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		F3EB87A51CF5CE90005AFAB8 /* SMRippleExample */ = {
 			isa = PBXGroup;
 			children = (
+				F3949A121EBF31F000BC74AE /* RippleCell.swift */,
 				F3FDB5C01E9DEEE200B95B3E /* SMRippleView */,
 				F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */,
 				F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */,
 				F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */,
 				F3EB87B21CF5CE90005AFAB8 /* Info.plist */,
+				F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */,
 			);
 			path = SMRippleExample;
 			sourceTree = "<group>";
@@ -271,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */,
+				F3949A131EBF31F000BC74AE /* RippleCell.swift in Sources */,
 				F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */,
 				F3FDB5C21E9DEEF100B95B3E /* SMRippleView.swift in Sources */,
+				F35BCA0B1EBF2DC200C90DD0 /* RippleTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
