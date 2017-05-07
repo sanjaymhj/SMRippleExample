@@ -19,7 +19,6 @@ class RippleCell: UITableViewCell {
         let frame = self.centerImageView?.frame ?? self.frame
         rippleView = SMRippleView(frame: frame, rippleColor: UIColor.black, rippleThickness: 1, rippleTimer: 1, fillColor: UIColor.black, animationDuration: 2, parentFrame: CGRect(x: self.bounds.maxX, y: self.bounds.maxX, width: self.bounds.size.width, height: self.bounds.size.width ))
         self.clipsToBounds = true
-        addSubview(rippleView)
         // Initialization code
     }
 

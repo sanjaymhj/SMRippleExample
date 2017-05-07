@@ -32,9 +32,14 @@ class RippleTVC: UITableViewController {
         return 5
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let rippleCell = cell as! RippleCell
+        rippleCell.addSubview(rippleCell.rippleView)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RippleCell", for: indexPath) as! RippleCell
-        cell.rippleView.startRipple()
+        //cell.rippleView.startRipple()
         // Configure the cell...
 
         return cell

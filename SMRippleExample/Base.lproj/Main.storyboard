@@ -60,7 +60,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piqa" translatesAutoresizingMaskIntoConstraints="NO" id="jDk-s1-dOq">
-                                            <rect key="frame" x="124.5" y="30" width="40" height="40"/>
+                                            <rect key="frame" x="124" y="30" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="U0e-VG-DLm"/>
                                                 <constraint firstAttribute="width" constant="40" id="WH2-sU-FP2"/>
