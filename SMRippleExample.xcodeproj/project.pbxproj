@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F35BCA0B1EBF2DC200C90DD0 /* RippleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */; };
+		F3949A131EBF31F000BC74AE /* RippleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3949A121EBF31F000BC74AE /* RippleCell.swift */; };
 		F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */; };
 		F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */; };
 		F3EB87AC1CF5CE90005AFAB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */; };
@@ -14,7 +16,7 @@
 		F3EB87B11CF5CE90005AFAB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */; };
 		F3EB87BC1CF5CE90005AFAB8 /* SMRippleExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87BB1CF5CE90005AFAB8 /* SMRippleExampleTests.swift */; };
 		F3EB87C71CF5CE90005AFAB8 /* SMRippleExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */; };
-		F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */; };
+		F3FDB5C21E9DEEF100B95B3E /* SMRippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleTVC.swift; sourceTree = "<group>"; };
+		F3949A121EBF31F000BC74AE /* RippleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RippleCell.swift; sourceTree = "<group>"; };
 		F3EB87A31CF5CE90005AFAB8 /* SMRippleExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMRippleExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +52,7 @@
 		F3EB87C21CF5CE90005AFAB8 /* SMRippleExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMRippleExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EB87C61CF5CE90005AFAB8 /* SMRippleExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMRippleExampleUITests.swift; sourceTree = "<group>"; };
 		F3EB87C81CF5CE90005AFAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMRippleView.swift; sourceTree = "<group>"; };
+		F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMRippleView.swift; path = SMRippleView/SMRippleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,15 @@
 		F3EB87A51CF5CE90005AFAB8 /* SMRippleExample */ = {
 			isa = PBXGroup;
 			children = (
+				F3949A121EBF31F000BC74AE /* RippleCell.swift */,
+				F3FDB5C01E9DEEE200B95B3E /* SMRippleView */,
 				F3EB87A61CF5CE90005AFAB8 /* AppDelegate.swift */,
 				F3EB87A81CF5CE90005AFAB8 /* ViewController.swift */,
 				F3EB87AA1CF5CE90005AFAB8 /* Main.storyboard */,
 				F3EB87AD1CF5CE90005AFAB8 /* Assets.xcassets */,
 				F3EB87AF1CF5CE90005AFAB8 /* LaunchScreen.storyboard */,
 				F3EB87B21CF5CE90005AFAB8 /* Info.plist */,
-				F3EB87D41CF5CF19005AFAB8 /* SMRippleView.swift */,
+				F35BCA0A1EBF2DC200C90DD0 /* RippleTVC.swift */,
 			);
 			path = SMRippleExample;
 			sourceTree = "<group>";
@@ -126,6 +132,14 @@
 				F3EB87C81CF5CE90005AFAB8 /* Info.plist */,
 			);
 			path = SMRippleExampleUITests;
+			sourceTree = "<group>";
+		};
+		F3FDB5C01E9DEEE200B95B3E /* SMRippleView */ = {
+			isa = PBXGroup;
+			children = (
+				F3FDB5C11E9DEEF100B95B3E /* SMRippleView.swift */,
+			);
+			name = SMRippleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,13 +210,16 @@
 				TargetAttributes = {
 					F3EB87A21CF5CE90005AFAB8 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 					};
 					F3EB87B61CF5CE90005AFAB8 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 						TestTargetID = F3EB87A21CF5CE90005AFAB8;
 					};
 					F3EB87C11CF5CE90005AFAB8 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0830;
 						TestTargetID = F3EB87A21CF5CE90005AFAB8;
 					};
 				};
@@ -260,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3EB87A91CF5CE90005AFAB8 /* ViewController.swift in Sources */,
+				F3949A131EBF31F000BC74AE /* RippleCell.swift in Sources */,
 				F3EB87A71CF5CE90005AFAB8 /* AppDelegate.swift in Sources */,
-				F3EB87D51CF5CF19005AFAB8 /* SMRippleView.swift in Sources */,
+				F3FDB5C21E9DEEF100B95B3E /* SMRippleView.swift in Sources */,
+				F35BCA0B1EBF2DC200C90DD0 /* RippleTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +438,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -429,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMRippleExample.app/SMRippleExample";
 			};
 			name = Debug;
@@ -441,6 +463,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SMRippleExample.app/SMRippleExample";
 			};
 			name = Release;
@@ -452,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SMRippleExample;
 			};
 			name = Debug;
@@ -463,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.snjmhj.SMRippleExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SMRippleExample;
 			};
 			name = Release;
@@ -486,6 +511,7 @@
 				F3EB87CD1CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3EB87CE1CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +520,7 @@
 				F3EB87D01CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3EB87D11CF5CE90005AFAB8 /* Build configuration list for PBXNativeTarget "SMRippleExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +529,7 @@
 				F3EB87D31CF5CE90005AFAB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
