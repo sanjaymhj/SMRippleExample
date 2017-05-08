@@ -16,7 +16,7 @@ class RippleCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let frame = self.centerImageView?.frame ?? self.frame
+        let frame = self.centerImageView?.bounds ?? self.frame
         rippleView = SMRippleView(frame: frame, rippleColor: UIColor.black, rippleThickness: 1, rippleTimer: 1, fillColor: UIColor.black, animationDuration: 2, parentFrame: CGRect(x: self.bounds.maxX, y: self.bounds.maxX, width: self.bounds.size.width, height: self.bounds.size.width ))
         self.clipsToBounds = true
         // Initialization code
