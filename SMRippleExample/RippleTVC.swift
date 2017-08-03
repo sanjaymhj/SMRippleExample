@@ -33,8 +33,8 @@ class RippleTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let rippleCell = cell as! RippleCell
-        rippleCell.centerImageView.addSubview(rippleCell.rippleView)
+        //let rippleCell = cell as! RippleCell
+        //rippleCell.centerImageView.addSubview(rippleCell.rippleView)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

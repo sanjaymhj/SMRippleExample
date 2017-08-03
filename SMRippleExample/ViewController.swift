@@ -17,15 +17,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let fillColor: UIColor? = UIColor.black//UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1)
-        rippleView = SMRippleView(frame: baseView.frame, rippleColor: UIColor.black, rippleThickness: 0.2, rippleTimer: 0.6, fillColor: fillColor, animationDuration: 4, parentFrame: self.view.frame)
-        self.view.addSubview(rippleView!)
+        rippleView = SMRippleView(frame: baseView.bounds, rippleColor: UIColor.black, rippleThickness: 0.2, rippleTimer: 0.6, fillColor: fillColor, animationDuration: 4, parentFrame: self.view.frame)
+        self.baseView.addSubview(rippleView!)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        rippleView?.center = self.baseView.center
+        //rippleView?.center = self.baseView.center
     }
 
     override func didReceiveMemoryWarning() {

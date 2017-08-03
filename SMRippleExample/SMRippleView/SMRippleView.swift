@@ -23,9 +23,12 @@ final class SMRippleView: UIView {
     
     fileprivate var timer: Timer?
     
+    var originalFrame: CGRect!
+    
     convenience init(frame: CGRect, rippleColor: UIColor, rippleThickness: Float, rippleTimer: Float, fillColor: UIColor?, animationDuration: Double, parentFrame: CGRect) {
         self.init(frame: frame)
-        self.layer.zPosition = -1
+        originalFrame = frame
+        self.layer.zPosition = -10
         commonInit(frame, rippleColor: rippleColor, rippleThickness: rippleThickness, rippleTimer: rippleTimer, fillColor: fillColor,  animationDuration: animationDuration, parentFrame: parentFrame)
     }
     
@@ -59,7 +62,6 @@ final class SMRippleView: UIView {
     
     /// For initial ripple ie. at 0 time
     private func drawWithFrame(_ frame: CGRect) {
-        let _ = getLayer()
         startRipple()
     }
     
@@ -71,7 +73,7 @@ final class SMRippleView: UIView {
         
         let path = UIBezierPath(roundedRect: pathFrame, cornerRadius: self.frame.size.height)
         
-        let shapePosition = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+        let shapePosition = CGPoint(x: originalFrame.midX, y: originalFrame.midY)
         let circleShape = RippleCALayer()
         circleShape.path = path.cgPath
         
@@ -79,7 +81,7 @@ final class SMRippleView: UIView {
         circleShape.position = shapePosition
         circleShape.fillColor = self.fillColor.cgColor
         circleShape.opacity = 0//Opacity is 0 so it is invisible in initial state
-        circleShape.zPosition = -1
+        circleShape.zPosition = -10
         circleShape.strokeColor = self.rippleColor.cgColor
         circleShape.lineWidth = CGFloat(self.rippleThickness)
 
@@ -117,7 +119,9 @@ final class SMRippleView: UIView {
         animation.delegate = layer
         layer.animationDelegate = self
         layer.add(animation, forKey: nil)
-        self.layer.addSublayer(layer)
+        //self.superview?.layer.insertSublayer(layer, below: self.superview?.layer)//addSublayer(layer)
+        self.superview?.layer.addSublayer(layer)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -131,6 +135,8 @@ final class SMRippleView: UIView {
 extension SMRippleView: AnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, layer: CALayer, finished: Bool) {
         layer.removeFromSuperlayer()
+        print("removed layer")
+        print(layer)
     }
 }
 
